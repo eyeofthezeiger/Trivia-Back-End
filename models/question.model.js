@@ -23,11 +23,7 @@ const questionSchema = new mongoose.Schema({
         minlength: 2
     },
     incorrectAnswers: { 
-        type: [{
-            incorrect1: {type: String},
-            incorrect2: {type: String},
-            incorrect3: {type: String}
-        }], 
+        type: [], 
         required: true, 
         minlength: 3
     },
