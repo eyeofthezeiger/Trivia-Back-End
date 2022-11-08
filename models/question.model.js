@@ -24,9 +24,9 @@ const questionSchema = new mongoose.Schema({
     },
     incorrectAnswers: { 
         type: [{
-            incorrect1: String,
-            incorrect2: String,
-            incorrect3: String
+            incorrect1: {type: String},
+            incorrect2: {type: String},
+            incorrect3: {type: String}
         }], 
         required: true, 
         minlength: 3
@@ -36,32 +36,25 @@ const questionSchema = new mongoose.Schema({
         required: true,
         minlength: 2
     },
+    tags: {
+        type: [],
+        required: false
+    },
+    type: {
+        type: String,
+        required: true,
+        minlength: 2
+    },
     difficulty: {
         type: String,
         required: true,
         minlength: 2
+    },
+    regions: {
+        type: [],
+        required: false
     }
 })
-
-// userSchema.pre('save', function(next) {
-//     let user = this;
-
-//     // only hash the password if it has been modified (or is new)
-//     if (!user.isModified('password')) return next();
-
-//     // generate a salt
-//     bcrypt.genSalt(10, function(err, salt) {
-//         if (err) return next(err);
-
-//         // hash the password using our new salt
-//         bcrypt.hash(user.password, salt, function(err, hash) {
-//             if (err) return next(err);
-//             // override the cleartext password with the hashed one
-//             user.password = hash;
-//             next();
-//         });
-//     });
-// });
 
 //Generate the model our code with interact with from the above schema
 //Models allow us to interact with the data inside our MongoDB collections
