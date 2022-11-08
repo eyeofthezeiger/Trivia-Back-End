@@ -136,8 +136,9 @@ const userController = {
             })
 
         }
-    }
-    
+    },
+    //method to get 10 category questions for the user to answer
+
 
 }
 
