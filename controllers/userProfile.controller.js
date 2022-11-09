@@ -5,8 +5,32 @@ const UserProfile = require("../models/userProfile.model")
 //build our controller that will have our CRUD and other methods for our users
 const userProfileController = {
 
+    //method to create a new user
+    createProfile: async function(req, res){
+
+        try {
+
+            //store user data sent through the request
+            const profileData = req.body;
+
+            //pass the profileData to the create method of the User model
+            let newProfile = await UserProfile.create(profileData)
+
+            //return the newly created user
+            res.status(201).json(await UserProfile.findById(newProfile._id))
+            
+        } catch (error) {
+            //handle errors creating user
+            console.log("failed to create profile: " + error)
+            res.status(400).json({
+                message: error.message,
+                statusCode: res.statusCode
+            })
+        }
+
+    },
     //method to get all users using async/await syntax
-    getUsers: async function(req, res){
+    getProfiles: async function(req, res){
 
         //create base query
         let query = {}
@@ -30,7 +54,7 @@ const userProfileController = {
             //use our model to find users that match a query.
             //{} is the current query which really mean find all the users
             //we use await here since this is an async process and we want the code to wait for this to finish before moving on to the next line of code
-            let allUsers = await User.find(query)
+            let allUsers = await UserProfile.find(query)
             
             //return all the users that we found in JSON format
             res.json(allUsers)
@@ -45,30 +69,6 @@ const userProfileController = {
 
         }
     },
-    //method to create a new user
-    createUser: async function(req, res){
-
-        try {
-
-            //store user data sent through the request
-            const userData = req.body;
-
-            //pass the userData to the create method of the User model
-            let newUser = await User.create(userData)
-
-            //return the newly created user
-            res.status(201).json(await User.findById(newUser._id))
-            
-        } catch (error) {
-            //handle errors creating user
-            console.log("failed to create user: " + error)
-            res.status(400).json({
-                message: error.message,
-                statusCode: res.statusCode
-            })
-        }
-
-    },
     //method to update a user
     updateQuestionCount: async function(req, res, next){
 
@@ -81,18 +81,18 @@ const userProfileController = {
             const newUserData = req.body;
 
             //try to find our user by the email provided in the request params
-            const user = await User.findOne({email: email})
+            const profile = await UserProfile.findOne({email: email})
 
             //update the user if we found a match and save or return a 404
-            if(user){
+            if(profile){
                 Object.assign(user, newUserData)
-                await user.save()
+                await profile.save()
             }else{
                 res.status(404).send({message: "User not found", statusCode: res.statusCode});
             }
 
             //respond with updated user
-            res.json(await User.findById(user._id))
+            res.json(await UserProfile.findById(user._id))
             
         } catch (error) {
             console.log("failed to update user: " + error)
@@ -104,7 +104,7 @@ const userProfileController = {
 
     },
     //method to get all users using async/await syntax
-    getUser: async function(req, res){
+    getProfile: async function(req, res){
 
         //using a try/catch since we are using asyn/await and want to catch any errors if the code in the try block fails
         try {
@@ -115,7 +115,7 @@ const userProfileController = {
             //use our model to find the user that match a query.
             //{email: some@email.com} is the current query which really mean find the user with that email
             //we use await here since this is an async process and we want the code to wait for this to finish before moving on to the next line of code
-            let foundUser = await User.findOne({email: userEmail})
+            let foundUser = await UserProfile.findOne({email: userEmail})
 
             //if we found the user, return that user otherwise return a 404
             if(foundUser){
