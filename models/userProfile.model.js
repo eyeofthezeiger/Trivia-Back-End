@@ -38,7 +38,7 @@ const userProfileSchema = new mongoose.Schema({
 //Generate the model our code with interact with from the above schema
 //Models allow us to interact with the data inside our MongoDB collections
 //More info: https://mongoosejs.com/docs/models.html
-const UserProfile = mongoose.model('User', userProfileSchema);
+const UserProfile = mongoose.model('UserProfile', userProfileSchema);
 
 //export our model
 module.exports = UserProfile;
