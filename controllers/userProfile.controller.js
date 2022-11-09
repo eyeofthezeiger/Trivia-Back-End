@@ -21,7 +21,7 @@ const userProfileController = {
             
         } catch (error) {
             //handle errors creating user
-            console.log("failed to create user: " + error)
+            console.log("failed to create profile: " + error)
             res.status(400).json({
                 message: error.message,
                 statusCode: res.statusCode
@@ -68,30 +68,6 @@ const userProfileController = {
             })
 
         }
-    },
-    //method to create a new user
-    createUser: async function(req, res){
-
-        try {
-
-            //store user data sent through the request
-            const userData = req.body;
-
-            //pass the userData to the create method of the User model
-            let newUser = await User.create(userData)
-
-            //return the newly created user
-            res.status(201).json(await User.findById(newUser._id))
-            
-        } catch (error) {
-            //handle errors creating user
-            console.log("failed to create user: " + error)
-            res.status(400).json({
-                message: error.message,
-                statusCode: res.statusCode
-            })
-        }
-
     },
     //method to update a user
     updateQuestionCount: async function(req, res, next){
