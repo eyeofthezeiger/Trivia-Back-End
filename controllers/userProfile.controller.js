@@ -5,6 +5,30 @@ const UserProfile = require("../models/userProfile.model")
 //build our controller that will have our CRUD and other methods for our users
 const userProfileController = {
 
+    //method to create a new user
+    createProfile: async function(req, res){
+
+        try {
+
+            //store user data sent through the request
+            const profileData = req.body;
+
+            //pass the profileData to the create method of the User model
+            let newProfile = await UserProfile.create(profileData)
+
+            //return the newly created user
+            res.status(201).json(await UserProfile.findById(newProfile._id))
+            
+        } catch (error) {
+            //handle errors creating user
+            console.log("failed to create user: " + error)
+            res.status(400).json({
+                message: error.message,
+                statusCode: res.statusCode
+            })
+        }
+
+    },
     //method to get all users using async/await syntax
     getUsers: async function(req, res){
 

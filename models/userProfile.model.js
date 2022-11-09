@@ -6,22 +6,25 @@ const mongoose = require("mongoose");
 const userProfileSchema = new mongoose.Schema({
     questionsAttempted: {
         type: Number, 
-        required: true,
-        minlength: 1
+        required: false,
+        minlength: 1,
+        default: 0
     },
     correctAnswers: {
         type: Number, 
-        required: true,
-        minlength: 1
+        required: false,
+        minlength: 1,
+        default: 0
     },
     wrongAnswers: {
         type: Number, 
-        required: true,
-        minlength: 1 
+        required: false,
+        minlength: 1,
+        default: 0
     },
     favoritesList: {
         type: [], 
-        required: true,
+        required: false,
         
     },
     email: { 
