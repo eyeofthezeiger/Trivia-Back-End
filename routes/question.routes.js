@@ -6,19 +6,19 @@ const { validateJwtMiddleware } = require("../auth");
 const questionController = require("../controllers/question.controller")
 
 //get route to return all question categories
-router.get("/", validateJwtMiddleware, questionController.getCategories)
-
-//put route to set the current session category
-router.put("/", validateJwtMiddleware, questionController.setCategory)
+router.get("/categories", validateJwtMiddleware, questionController.getCategories)
+//
+// //put route to set the current session category
+// router.put("/:category", validateJwtMiddleware, questionController.setCategory)
 
 //get route to retrieve 10 category questions
-router.get("/", validateJwtMiddleware, questionController.getCategoryQuestions)
+router.get("/category", validateJwtMiddleware, questionController.getCategoryQuestions)
 
-//get route to retrieve question based on number question
-router.get("/:number", validateJwtMiddleware, questionController.getCategoryQuestion)
+// //get route to retrieve question based on number question
+// router.get("/category/question/:number", validateJwtMiddleware, questionController.getCategoryQuestion)
 
-//put route to update user answer to question
-router.put("/:number", validateJwtMiddleware, questionController.setQuestionAnswer)
+// //put route to update user answer to question
+// router.put("/category/question/:number", validateJwtMiddleware, questionController.setQuestionAnswer)
 
 module.exports = router;
 
