@@ -258,11 +258,33 @@ paths:
         '404':
           $ref: '#/components/responses/404'
 
-  /api/questions/category:
+  /api/questions/categories:
     get:
       summary: Get Question Categories
       tags:
-        - Users
+        - Question
+      security:
+        - bearerAuth: [ ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - type: object
+                    properties:
+                      users:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/QuestionResponse'
+        '400':
+          $ref: '#/components/responses/400'
+  /api/questions/category:
+    get:
+      summary: Get Questions based on user select category
+      tags:
+        - Question
       parameters:
         - in: query
           name: category
