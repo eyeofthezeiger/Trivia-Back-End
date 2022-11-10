@@ -1,5 +1,6 @@
 //Import our model so we can us it to interact with the realated data in MongoDB
 const User = require("../models/user.model")
+const UserProfile = require("../models/userProfile.model")
 
 
 //build our controller that will have our CRUD and other methods for our users
@@ -139,7 +140,47 @@ const userController = {
     },
     //method to get 10 category questions for the user to answer
 
+//method to delete user
+deleteUser: async function (req, res, next) {
+    try {
 
+        //get the email address of the user from the url parameters
+        const userEmail = req.params.email;
+
+        //use our model to find the user that match a query.
+        //{email: some@email.com} is the current query which really means find the user with that email
+        //we use await here as we want the code to wait for this to finish before moving on to the next line of code
+        const delUser = await User.findOne({email: userEmail});
+       
+        
+        //if the userEmail is found we delete the user, if not we throw an error.  We are also checking for and 
+        //deleting the userProfile here
+        if (delUser) {
+            User.deleteOne(delUser, (error) => {
+                if (error)
+                    throw error});
+            
+            const delUserProfile = await UserProfile.findOne({email: userEmail});
+            if (delUserProfile){
+                UserProfile.deleteOne(delUserProfile, (error) => {
+                    if (error)
+                        console.log(error)});
+                    
+            }
+         //if the delete is successful we send the email indicating so, if not we send a notification that the account cannot be found   
+            res.status(202).send({ message: "User account has been deleted", statusCode: res.statusCode });
+        } else {
+            res.status(404).send({ message: "This user account cannot be found", statusCode: res.statusCode });
+        }
+    } catch (error) {
+        console.log("failed to delete user: " + error)
+        res.status(400).json({
+            message: error.message,
+            statusCode: res.statusCode
+        })
+    }
+},
 }
+
 
 module.exports = userController;

@@ -19,4 +19,7 @@ router.get("/:email", validateJwtMiddleware, userController.getUser)
 //put route to update a user (requires auth)
 router.put("/:email", validateJwtMiddleware, userController.updateUser)
 
+//delete user
+router.delete("/:email", validateJwtMiddleware, userController.deleteUser)
+
 module.exports = router;
