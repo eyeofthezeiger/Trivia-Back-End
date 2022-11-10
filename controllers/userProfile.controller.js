@@ -54,10 +54,10 @@ const userProfileController = {
             //use our model to find users that match a query.
             //{} is the current query which really mean find all the users
             //we use await here since this is an async process and we want the code to wait for this to finish before moving on to the next line of code
-            let allUsers = await UserProfile.find(query)
+            let allProfiles = await UserProfile.find(query)
             
             //return all the users that we found in JSON format
-            res.json(allUsers)
+            res.json(allProfiles)
             
         } catch (error) {
             console.log("error getting all users: " + error)
