@@ -17,6 +17,6 @@ router.post("/", validateJwtMiddleware, userProfileController.createProfile)
 router.get("/:email", validateJwtMiddleware, userProfileController.getProfile)
 
 // patch route to update only a portion of the user profile data
-router.patch("/:email", validateJwtMiddleware, userProfileController.updateQuestionCount)
+router.patch("/:email", validateJwtMiddleware, userProfileController.partialProfileUpdate)
 
 module.exports = router;

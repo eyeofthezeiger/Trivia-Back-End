@@ -70,7 +70,7 @@ const userProfileController = {
         }
     },
     //method to update a user
-    updateQuestionCount: async function(req, res, next){
+    partialProfileUpdate: async function(req, res, next){
 
         try {
 
