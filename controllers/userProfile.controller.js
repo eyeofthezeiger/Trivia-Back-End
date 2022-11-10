@@ -54,10 +54,10 @@ const userProfileController = {
             //use our model to find users that match a query.
             //{} is the current query which really mean find all the users
             //we use await here since this is an async process and we want the code to wait for this to finish before moving on to the next line of code
-            let allUsers = await UserProfile.find(query)
+            let allProfiles = await UserProfile.find(query)
             
             //return all the users that we found in JSON format
-            res.json(allUsers)
+            res.json(allProfiles)
             
         } catch (error) {
             console.log("error getting all users: " + error)
@@ -70,7 +70,7 @@ const userProfileController = {
         }
     },
     //method to update a user
-    updateQuestionCount: async function(req, res, next){
+    partialProfileUpdate: async function(req, res, next){
 
         try {
 
@@ -78,21 +78,21 @@ const userProfileController = {
             const email = req.params.email;
 
             //store user data sent through the request
-            const newUserData = req.body;
+            const newProfileData = req.body;
 
             //try to find our user by the email provided in the request params
             const profile = await UserProfile.findOne({email: email})
 
             //update the user if we found a match and save or return a 404
             if(profile){
-                Object.assign(user, newUserData)
+                Object.assign(profile, newProfileData)
                 await profile.save()
             }else{
                 res.status(404).send({message: "User not found", statusCode: res.statusCode});
             }
 
             //respond with updated user
-            res.json(await UserProfile.findById(user._id))
+            res.json(await UserProfile.findById(profile._id))
             
         } catch (error) {
             console.log("failed to update user: " + error)
