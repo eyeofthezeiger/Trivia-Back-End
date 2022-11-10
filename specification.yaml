@@ -323,6 +323,8 @@ paths:
       x-controller: profiles
       tags:
         - Profile
+      security:
+        - bearerAuth: []
       requestBody:
         required: true
         content:
@@ -342,6 +344,68 @@ paths:
                         $ref: '#/components/schemas/UserProfileResponse'
         '400':
           $ref: '#/components/responses/400'
+  /api/profiles/{email}:
+    get:
+      summary: Get list of a single user profile
+      tags:
+        - Profile
+      parameters:
+        - in: path
+          name: email
+          required: true
+          schema:
+            type: string
+            description: The email address of the user
+      security:
+        - bearerAuth: [ ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - type: object
+                    properties:
+                      users:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/UserProfileResponse'
+        '400':
+          $ref: '#/components/responses/400'
+    patch:
+      summary: Update user profile
+      tags:
+        - Profile
+      parameters:
+        - in: path
+          name: email
+          required: true
+          schema:
+            type: string
+            description: The email address of the user
+      security:
+        - bearerAuth: []
+      requestBody:
+        description: The user profile updates
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserProfile'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfileResponse'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '404':
+          $ref: '#/components/responses/404'
   /api/questions/categories:
     get:
       summary: Get Question Categories
