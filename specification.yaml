@@ -38,6 +38,12 @@ components:
           type: string
         email:
           type: string
+    QuestionResponse:
+      additionalProperties: false
+      type: object
+      properties:
+        category:
+          type: string
     Login:
       additionalProperties: false
       type: object
@@ -251,3 +257,55 @@ paths:
           $ref: '#/components/responses/401'
         '404':
           $ref: '#/components/responses/404'
+
+  /api/questions/categories:
+    get:
+      summary: Get Question Categories
+      tags:
+        - Question
+      security:
+        - bearerAuth: [ ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - type: object
+                    properties:
+                      users:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/QuestionResponse'
+        '400':
+          $ref: '#/components/responses/400'
+  /api/questions/category:
+    get:
+      summary: Get Questions based on user select category
+      tags:
+        - Question
+      parameters:
+        - in: query
+          name: category
+          required: true
+          schema:
+            type: string
+            description: The users selected category
+      security:
+        - bearerAuth: [ ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - type: object
+                    properties:
+                      users:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/QuestionResponse'
+        '400':
+          $ref: '#/components/responses/400'
