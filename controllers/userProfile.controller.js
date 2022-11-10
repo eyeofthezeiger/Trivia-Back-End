@@ -92,7 +92,7 @@ const userProfileController = {
             }
 
             //respond with updated user
-            res.json(await UserProfile.findById(user._id))
+            res.json(await UserProfile.findById(profile._id))
             
         } catch (error) {
             console.log("failed to update user: " + error)
