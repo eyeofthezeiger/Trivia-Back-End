@@ -78,14 +78,14 @@ const userProfileController = {
             const email = req.params.email;
 
             //store user data sent through the request
-            const newUserData = req.body;
+            const newProfileData = req.body;
 
             //try to find our user by the email provided in the request params
             const profile = await UserProfile.findOne({email: email})
 
             //update the user if we found a match and save or return a 404
             if(profile){
-                Object.assign(user, newUserData)
+                Object.assign(profile, newProfileData)
                 await profile.save()
             }else{
                 res.status(404).send({message: "User not found", statusCode: res.statusCode});

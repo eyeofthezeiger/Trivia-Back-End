@@ -16,4 +16,7 @@ router.post("/", validateJwtMiddleware, userProfileController.createProfile)
 //get route to return a specific users (requires auth)
 router.get("/:email", validateJwtMiddleware, userProfileController.getProfile)
 
+// patch route to update only a portion of the user profile data
+router.patch("/:email", validateJwtMiddleware, userProfileController.updateQuestionCount)
+
 module.exports = router;
