@@ -1,27 +1,27 @@
 //Import our model so we can us it to interact with the realated data in MongoDB
-const UserProfile = require("../models/userProfile.model")
+const UserStats = require("../models/userStats.model")
 
 
-//build our controller that will have our CRUD and other methods for our users
-const userProfileController = {
+//build our controller that will have our CRUD and other methods for our users' stats
+const userStatsController = {
 
-    //method to create a new user
-    createProfile: async function(req, res){
+    //method to create a new set of user stats
+    createUserStats: async function(req, res){
 
         try {
 
-            //store user data sent through the request
-            const profileData = req.body;
+            //store user stats data sent through the request
+            const userStatsData = req.body;
 
-            //pass the profileData to the create method of the User model
-            let newProfile = await UserProfile.create(profileData)
+            //pass the userStatsData to the create method of the userStats model
+            let newUserStats = await UserStats.create(userStatsData)
 
-            //return the newly created user
-            res.status(201).json(await UserProfile.findById(newProfile._id))
+            //return the newly created user stats
+            res.status(201).json(await UserStats.findById(newUserStats._id))
             
         } catch (error) {
-            //handle errors creating user
-            console.log("failed to create profile: " + error)
+            //handle errors creating user stats
+            console.log("failed to create user stats: " + error)
             res.status(400).json({
                 message: error.message,
                 statusCode: res.statusCode
@@ -29,35 +29,22 @@ const userProfileController = {
         }
 
     },
-    //method to get all users using async/await syntax
-    getProfiles: async function(req, res){
+    //method to get all users' stats using async/await syntax
+    getAllUserStats: async function(req, res){
 
         //create base query
         let query = {}
 
-        //if firstName filter appears in query parameters then modify the query to do a fuzzy search
-        if(req.query.firstName){
-            const regex = new RegExp(`.*${req.query.firstName}.*$`, "i")
-            query.firstName = {'$regex':regex}
-        }
-
-        //if lastName filter appears in query parameters then modify the query to do a fuzzy search
-        if(req.query.lastName){
-            const regex = new RegExp(`.*${req.query.lastName}.*$`, "i")
-            query.lastName = {'$regex':regex}
-        }
-
-
         //using a try/catch since we are using asyn/await and want to catch any errors if the code in the try block fails
         try {
             
-            //use our model to find users that match a query.
-            //{} is the current query which really mean find all the users
+            //use our model to find users' stats that match a query.
+            //{} is the current query which really mean find all the users's stats data
             //we use await here since this is an async process and we want the code to wait for this to finish before moving on to the next line of code
-            let allProfiles = await UserProfile.find(query)
+            let allUsersStats = await UserStats.find(query)
             
             //return all the users that we found in JSON format
-            res.json(allProfiles)
+            res.json(allUsersStats)
             
         } catch (error) {
             console.log("error getting all users: " + error)
@@ -69,8 +56,8 @@ const userProfileController = {
 
         }
     },
-    //method to update a user
-    partialProfileUpdate: async function(req, res, next){
+    //method to update a user's stats
+    partialUserStatsUpdate: async function(req, res, next){
 
         try {
 
@@ -78,24 +65,24 @@ const userProfileController = {
             const email = req.params.email;
 
             //store user data sent through the request
-            const newProfileData = req.body;
+            const newUserStatsData = req.body;
 
             //try to find our user by the email provided in the request params
-            const profile = await UserProfile.findOne({email: email})
+            const profile = await UserStats.findOne({email: email})
 
-            //update the user if we found a match and save or return a 404
+            //update the user's stats if we found a match and save or return a 404
             if(profile){
-                Object.assign(profile, newProfileData)
+                Object.assign(profile, newUserStatsData)
                 await profile.save()
             }else{
                 res.status(404).send({message: "User not found", statusCode: res.statusCode});
             }
 
-            //respond with updated user
-            res.json(await UserProfile.findById(profile._id))
+            //respond with updated user stats
+            res.json(await UserStats.findById(profile._id))
             
         } catch (error) {
-            console.log("failed to update user: " + error)
+            console.log("failed to update user's stats: " + error)
             res.status(400).json({
                 message: error.message,
                 statusCode: res.statusCode
@@ -104,7 +91,7 @@ const userProfileController = {
 
     },
     //method to get all users using async/await syntax
-    getProfile: async function(req, res){
+    getUserStats: async function(req, res){
 
         //using a try/catch since we are using asyn/await and want to catch any errors if the code in the try block fails
         try {
@@ -115,7 +102,7 @@ const userProfileController = {
             //use our model to find the user that match a query.
             //{email: some@email.com} is the current query which really mean find the user with that email
             //we use await here since this is an async process and we want the code to wait for this to finish before moving on to the next line of code
-            let foundUser = await UserProfile.findOne({email: userEmail})
+            let foundUser = await UserStats.findOne({email: userEmail})
 
             //if we found the user, return that user otherwise return a 404
             if(foundUser){
@@ -141,4 +128,4 @@ const userProfileController = {
 
 }
 
-module.exports = userProfileController;
+module.exports = userStatsController;

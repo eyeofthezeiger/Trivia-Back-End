@@ -1,6 +1,6 @@
 //Import our model so we can us it to interact with the realated data in MongoDB
 const User = require("../models/user.model")
-const UserProfile = require("../models/userProfile.model")
+const UserStats = require("../models/userStats.model")
 
 
 //build our controller that will have our CRUD and other methods for our users
@@ -154,15 +154,15 @@ deleteUser: async function (req, res, next) {
        
         
         //if the userEmail is found we delete the user, if not we throw an error.  We are also checking for and 
-        //deleting the userProfile here
+        //deleting the UserStats here
         if (delUser) {
             User.deleteOne(delUser, (error) => {
                 if (error)
                     throw error});
             
-            const delUserProfile = await UserProfile.findOne({email: userEmail});
-            if (delUserProfile){
-                UserProfile.deleteOne(delUserProfile, (error) => {
+            const delUserStats = await UserStats.findOne({email: userEmail});
+            if (delUserStats){
+                UserStats.deleteOne(delUserStats, (error) => {
                     if (error)
                         console.log(error)});
                     
