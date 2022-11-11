@@ -38,7 +38,7 @@ components:
           type: string
         email:
           type: string
-    UserProfile:
+    UserStats:
       additionalProperties: false
       type: object
       properties:
@@ -60,7 +60,7 @@ components:
           type: string
       required:
         - password
-    UserProfileResponse:
+    UserStatsResponse:
       additionalProperties: false
       type: object
       properties:
@@ -324,11 +324,11 @@ paths:
                         $ref: '#/components/schemas/UserResponse'
         '400':
           $ref: '#/components/responses/400'
-  /api/profiles:
+  /api/stats:
     get:
-      summary: Get list of all user profiles
+      summary: Get list of all users' stats
       tags:
-        - Profile
+        - User Stats
       security:
         - bearerAuth: [ ]
       responses:
@@ -343,15 +343,15 @@ paths:
                       users:
                         type: array
                         items:
-                          $ref: '#/components/schemas/UserProfileResponse'
+                          $ref: '#/components/schemas/UserStatsResponse'
         '400':
           $ref: '#/components/responses/400'
     post:
-      summary: Create a new user profile
-      operationId: createUserProfile
-      x-controller: profiles
+      summary: Create a new user stats
+      operationId: createUserStats
+      x-controller: stats
       tags:
-        - Profile
+        - User Stats
       security:
         - bearerAuth: []
       requestBody:
@@ -359,7 +359,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UserProfile'
+              $ref: '#/components/schemas/UserStats'
       responses:
         '200':
           description: OK
@@ -370,14 +370,14 @@ paths:
                   - type: object
                     properties:
                       user:
-                        $ref: '#/components/schemas/UserProfileResponse'
+                        $ref: '#/components/schemas/UserStatsResponse'
         '400':
           $ref: '#/components/responses/400'
-  /api/profiles/{email}:
+  /api/stats/{email}:
     get:
-      summary: Get list of a single user profile
+      summary: Get list of a single user's stats
       tags:
-        - Profile
+        - User Stats
       parameters:
         - in: path
           name: email
@@ -399,13 +399,13 @@ paths:
                       users:
                         type: array
                         items:
-                          $ref: '#/components/schemas/UserProfileResponse'
+                          $ref: '#/components/schemas/UserStatsResponse'
         '400':
           $ref: '#/components/responses/400'
     patch:
-      summary: Update user profile
+      summary: Update user's stats
       tags:
-        - Profile
+        - User Stats
       parameters:
         - in: path
           name: email
@@ -416,19 +416,19 @@ paths:
       security:
         - bearerAuth: []
       requestBody:
-        description: The user profile updates
+        description: The user's stats updates
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UserProfile'
+              $ref: '#/components/schemas/UserStats'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UserProfileResponse'
+                $ref: '#/components/schemas/UserStatsResponse'
         '400':
           $ref: '#/components/responses/400'
         '401':
