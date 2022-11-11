@@ -261,6 +261,7 @@ paths:
                         $ref: '#/components/schemas/UserResponse'
         '400':
           $ref: '#/components/responses/400'
+    
   /api/users/{email}:
     put:
       summary: Update user
@@ -295,6 +296,34 @@ paths:
           $ref: '#/components/responses/401'
         '404':
           $ref: '#/components/responses/404'
+    delete:
+      summary: delete a user
+      operationId: deleteUser
+      x-controller: users
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: email
+          required: true
+          schema:
+            type: string
+            description: The email address of the user
+      security:
+        - bearerAuth: [ ]
+      responses:
+        '202':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - type: object
+                    properties:
+                      user:
+                        $ref: '#/components/schemas/UserResponse'
+        '400':
+          $ref: '#/components/responses/400'
   /api/profiles:
     get:
       summary: Get list of all user profiles
