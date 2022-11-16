@@ -42,7 +42,8 @@ const userStatsSchema = new mongoose.Schema({
 
 // Virtual field to calculate the win/loss ratio
 userStatsSchema.virtual('winRatio').get(function() {
-    return this.correctAnswers / this.questionsAttempted;
+    let num = this.correctAnswers / this.questionsAttempted * 100
+    return num.toFixed(1);
   });
 
 //Generate the model our code with interact with from the above schema
