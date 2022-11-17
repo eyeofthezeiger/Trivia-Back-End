@@ -354,8 +354,8 @@ paths:
       x-controller: stats
       tags:
         - User Stats
-      security:
-        - bearerAuth: []
+      # security:
+      #   - bearerAuth: []
       requestBody:
         required: true
         content:

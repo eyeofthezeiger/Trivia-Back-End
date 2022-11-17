@@ -11,7 +11,7 @@ const userStatsController = require("../controllers/userStats.controller")
 router.get("/", validateJwtMiddleware, userStatsController.getAllUserStats)
 
 // create route to create the intial user Stats based on email address
-router.post("/", validateJwtMiddleware, userStatsController.createUserStats)
+router.post("/", userStatsController.createUserStats)
 
 //get route to return a specific users (requires auth)
 router.get("/:email", validateJwtMiddleware, userStatsController.getUserStats)

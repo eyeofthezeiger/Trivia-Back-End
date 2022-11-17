@@ -56,9 +56,12 @@ const userController = {
 
             //pass the userData to the create method of the User model
             let newUser = await User.create(userData)
+            let newUserStats = await UserStats.create({email: userData.email})
 
             //return the newly created user
             res.status(201).json(await User.findById(newUser._id))
+
+            
             
         } catch (error) {
             //handle errors creating user
