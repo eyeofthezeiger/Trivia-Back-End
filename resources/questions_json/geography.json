@@ -1,0 +1,190 @@
+[
+    {
+      "category": "Geography",
+      "id": "6233849962eaad73716a8c1b",
+      "correctAnswer": "Prince Edward Island",
+      "incorrectAnswers": [
+        "Quebec",
+        "Northwest Territories",
+        "Alberta"
+      ],
+      "question": "What is the smallest Canadian province?",
+      "tags": [
+        "canada",
+        "records",
+        "geography"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Geography",
+      "id": "622a1c387cc59eab6f950997",
+      "correctAnswer": "India",
+      "incorrectAnswers": [
+        "Bhutan",
+        "Nepal",
+        "Thailand"
+      ],
+      "question": "Which of these countries borders Bangladesh?",
+      "tags": [
+        "geography"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Geography",
+      "id": "623741cfcb85f7ce9e949d8c",
+      "correctAnswer": "Islamabad",
+      "incorrectAnswers": [
+        "Zagreb",
+        "Tallinn",
+        "Tehran"
+      ],
+      "question": "What is the capital city of Pakistan?",
+      "tags": [
+        "geography"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Geography",
+      "id": "62374024cb85f7ce9e949ce0",
+      "correctAnswer": "Havana",
+      "incorrectAnswers": [
+        "Conakry",
+        "Nicosia",
+        "Roseau"
+      ],
+      "question": "What is the capital city of Cuba?",
+      "tags": [
+        "geography"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Geography",
+      "id": "62602eb14b176d54800e3cee",
+      "correctAnswer": "Taichung",
+      "incorrectAnswers": [
+        "Wellington",
+        "Busan",
+        "Kuala Lumpur"
+      ],
+      "question": "Which of these cities is in Taiwan?",
+      "tags": [
+        "cities",
+        "asia",
+        "geography"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Geography",
+      "id": "6233866362eaad73716a8cce",
+      "correctAnswer": "Peru",
+      "incorrectAnswers": [
+        "Zimbabwe",
+        "Brazil",
+        "Venezuela"
+      ],
+      "question": "Where is Machu Picchu?",
+      "tags": [
+        "geography"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Geography",
+      "id": "62602dcf014f58b5fc1a3fc6",
+      "correctAnswer": "Warsaw",
+      "incorrectAnswers": [
+        "Helsinki",
+        "Paris",
+        "Düsseldorf"
+      ],
+      "question": "Which of these cities is in Poland?",
+      "tags": [
+        "cities",
+        "europe",
+        "geography"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Geography",
+      "id": "62602e584b176d54800e3cd4",
+      "correctAnswer": "Gent",
+      "incorrectAnswers": [
+        "Prague",
+        "Vienna",
+        "Stockholm"
+      ],
+      "question": "Which of these cities is in Belgium?",
+      "tags": [
+        "cities",
+        "europe",
+        "geography"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Geography",
+      "id": "623384e862eaad73716a8c3b",
+      "correctAnswer": "Zanzibar",
+      "incorrectAnswers": [
+        "Australia",
+        "Iceland",
+        "Hispaniola"
+      ],
+      "question": "What island is known as the Spice Island?",
+      "tags": [
+        "islands",
+        "nicknames",
+        "geography"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Geography",
+      "id": "622a1c387cc59eab6f950ad8",
+      "correctAnswer": "Finland",
+      "incorrectAnswers": [
+        "Poland",
+        "Lithuania",
+        "Latvia"
+      ],
+      "question": "Which of these countries borders Sweden?",
+      "tags": [],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    }
+  ]

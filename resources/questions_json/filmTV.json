@@ -1,0 +1,194 @@
+[
+    {
+      "category": "Film & TV",
+      "id": "62573f859da29df7b05f73a0",
+      "correctAnswer": "A leader tries to expand his empire while a poor barber tries to avoid persecution.",
+      "incorrectAnswers": [
+        "Two men join in an uneasy alliance against a third to find gold buried in a remote cemetery.",
+        "A weatherman finds himself trapped in a small town as he lives the same day over and over again.",
+        "A surgeon rescues a disfigured man who is mistreated while scraping a living as a side-show freak."
+      ],
+      "question": "What is the plot of the movie The Great Dictator?",
+      "tags": [
+        "film",
+        "film_and_tv"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Film & TV",
+      "id": "622a1c377cc59eab6f9506c8",
+      "correctAnswer": "Kevin Spacey",
+      "incorrectAnswers": [
+        "Russell Crowe",
+        "Jean-Claude Van Damme",
+        "John Turturro"
+      ],
+      "question": "Which actor has appeared in films including House of Cards and Superman Returns?",
+      "tags": [
+        "acting",
+        "film_and_tv"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Film & TV",
+      "id": "625740439da29df7b05f73d0",
+      "correctAnswer": "Lock, Stock and Two Smoking Barrels",
+      "incorrectAnswers": [
+        "La Haine",
+        "The Deer Hunter",
+        "Dead Poets Society"
+      ],
+      "question": "Name the movie that matches the following plot summary: 'Eddy has a week to pay back £500,000 after losing a poker game to a powerful local mobster.'",
+      "tags": [
+        "film",
+        "film_and_tv"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Film & TV",
+      "id": "622a1c347cc59eab6f94fbf9",
+      "correctAnswer": "\"Oh, no, it wasn't the airplanes. It was Beauty killed the Beast.\"",
+      "incorrectAnswers": [
+        "\"Louis, I think this is the beginning of a beautiful friendship.\"",
+        "\"That’s my secret, Captain: I’m always angry.\"",
+        "\"Oh, Jerry, don't let's ask for the moon. We have the stars.\""
+      ],
+      "question": "Which of these quotes is from the film 'King Kong'?",
+      "tags": [
+        "quotes",
+        "film",
+        "film_and_tv"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Film & TV",
+      "id": "625fd654dc0dd3b72da64ce8",
+      "correctAnswer": "1993",
+      "incorrectAnswers": [
+        "1989",
+        "1997",
+        "2001"
+      ],
+      "question": "In which year was Schindler's List first released in the cinema?",
+      "tags": [
+        "film",
+        "film_and_tv"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Film & TV",
+      "id": "62573fab3d2f5c16bfb88336",
+      "correctAnswer": "An Army officer serving in Vietnam is tasked with assassinating a renegade Special Forces Colonel.",
+      "incorrectAnswers": [
+        "A tramp who has fallen in love with a blind flower girl saves money to help her medically.",
+        "A freed slave sets out to rescue his wife from a brutal plantation-owner.",
+        "A Scottish warrior leads his countrymen in a rebellion to free his homeland."
+      ],
+      "question": "What is the plot of the movie Apocalypse Now?",
+      "tags": [
+        "film",
+        "film_and_tv"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Film & TV",
+      "id": "622a1c347cc59eab6f94f94a",
+      "correctAnswer": "Rain Man",
+      "incorrectAnswers": [
+        "The Godfather",
+        "The 400 Blows",
+        "Fast Times at Ridgemont High"
+      ],
+      "question": "Which film contains the character 'Raymond Babbitt'?",
+      "tags": [
+        "fictitious_characters",
+        "film",
+        "film_and_tv"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Film & TV",
+      "id": "622a1c367cc59eab6f950208",
+      "correctAnswer": "Steven Spielberg",
+      "incorrectAnswers": [
+        "Woody Allen",
+        "Martin Scorsese",
+        "Alfred Hitchcock"
+      ],
+      "question": "Which director directed Raiders of the Lost Ark?",
+      "tags": [
+        "film_and_tv"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Film & TV",
+      "id": "622a1c347cc59eab6f94fb65",
+      "correctAnswer": "Lawrence of Arabia",
+      "incorrectAnswers": [
+        "The Longest Day",
+        "Meredith Willson's The Music Man",
+        "Mutiny on the Bounty"
+      ],
+      "question": "Which film won the Academy Award for Best Picture in 1962?",
+      "tags": [
+        "academy_awards",
+        "film",
+        "film_and_tv"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Film & TV",
+      "id": "625740d19da29df7b05f73fa",
+      "correctAnswer": "Hotel Rwanda",
+      "incorrectAnswers": [
+        "The Terminator",
+        "Psycho",
+        "City of God"
+      ],
+      "question": "Name the movie that matches the following plot summary: 'A man houses over a thousand Tutsi refugees during their struggle against the Hutu militia.'",
+      "tags": [
+        "film",
+        "film_and_tv"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    }
+  ]

@@ -1,0 +1,202 @@
+[
+    {
+      "category": "History",
+      "id": "622a1c3d7cc59eab6f951c40",
+      "correctAnswer": "The Red Baron",
+      "incorrectAnswers": [
+        "The Blue Baron",
+        "The Yellow Baron",
+        "The Black Baron"
+      ],
+      "question": "By what name was Baron Manfred von Richthofen better known?",
+      "tags": [
+        "history"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "History",
+      "id": "622a1c3d7cc59eab6f951c27",
+      "correctAnswer": "Henry VIII",
+      "incorrectAnswers": [
+        "Charles I",
+        "William the Conqueror",
+        "James III"
+      ],
+      "question": "Who was the father of Queen Elizabeth I of England?",
+      "tags": [
+        "kings",
+        "uk",
+        "history"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "History",
+      "id": "622a1c3d7cc59eab6f951c08",
+      "correctAnswer": "Richard Nixon",
+      "incorrectAnswers": [
+        "Donald Trump",
+        "Ronald Reagan",
+        "George W Bush"
+      ],
+      "question": "Which President of the USA infamously allowed the bugging of the Democratic Committee headquarters?",
+      "tags": [
+        "presidents",
+        "events",
+        "usa",
+        "history"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "History",
+      "id": "622a1c3c7cc59eab6f951a1a",
+      "correctAnswer": "Marie Antoinette",
+      "incorrectAnswers": [
+        "Eleanor of Aquitaine",
+        "Margaret of Provence",
+        "Maria Theresa"
+      ],
+      "question": "Which Queen of France was beheaded in 1793?",
+      "tags": [
+        "history"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "History",
+      "id": "622a1c3c7cc59eab6f95189b",
+      "correctAnswer": "Italian",
+      "incorrectAnswers": [
+        "Spanish",
+        "French",
+        "English"
+      ],
+      "question": "What was the nationality of Marco Polo?",
+      "tags": [
+        "exploration",
+        "people",
+        "middle_ages",
+        "medieval",
+        "history"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "History",
+      "id": "622a1c3c7cc59eab6f951a6c",
+      "correctAnswer": "Pirate",
+      "incorrectAnswers": [
+        "Judge",
+        "Prime Minister",
+        "General"
+      ],
+      "question": " What was Sir Henry Morgan famous for in the 17th century?",
+      "tags": [
+        "people",
+        "history"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "History",
+      "id": "622a1c3c7cc59eab6f951a1b",
+      "correctAnswer": "Pearl Harbour",
+      "incorrectAnswers": [
+        "D Day",
+        "The bombing of hiroshima",
+        "The Nazi invasion of France"
+      ],
+      "question": "Which military attack took place on Dec. 7, 1941?",
+      "tags": [
+        "history"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "History",
+      "id": "62611f444b176d54800e3d4d",
+      "correctAnswer": "1962",
+      "incorrectAnswers": [
+        "1950",
+        "1970",
+        "1973"
+      ],
+      "question": "When did the Cuban Missile Crisis bring the world to the brink of nuclear war?",
+      "tags": [
+        "events",
+        "politics",
+        "cold_war",
+        "usa",
+        "russia",
+        "cuba",
+        "history"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "History",
+      "id": "622a1c347cc59eab6f94f9ec",
+      "correctAnswer": "John Adams",
+      "incorrectAnswers": [
+        "Herbert Hoover",
+        "Calvin Coolidge",
+        "Ulysses S. Grant"
+      ],
+      "question": "Who was the 2nd president of the USA, in term during the period 1797–1801?",
+      "tags": [
+        "presidents",
+        "usa",
+        "history"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "History",
+      "id": "639898395c9a75021f310465",
+      "correctAnswer": "1939",
+      "incorrectAnswers": [
+        "1941",
+        "1945",
+        "1937"
+      ],
+      "question": "What year did World War II begin?",
+      "tags": [
+        "history",
+        "world_war_2",
+        "wars"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    }
+  ]

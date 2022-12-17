@@ -1,0 +1,195 @@
+[
+    {
+      "category": "Sport & Leisure",
+      "id": "62399ec510536452e756f440",
+      "correctAnswer": "France",
+      "incorrectAnswers": [
+        "Germany",
+        "Argentina",
+        "England"
+      ],
+      "question": "Which country won the 2018 FIFA World Cup, hosted in Russia?",
+      "tags": [
+        "sport"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Sport & Leisure",
+      "id": "62417db60f96c4efe8d773e2",
+      "correctAnswer": "Seattle Kraken",
+      "incorrectAnswers": [
+        "Seattle Indians",
+        "Seattle Sharks",
+        "Seattle Wizards"
+      ],
+      "question": "Which of these is a hockey team based in Seattle?",
+      "tags": [
+        "sport"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Sport & Leisure",
+      "id": "622a1c367cc59eab6f95009a",
+      "correctAnswer": "Mrs White, Miss Scarlet, Mrs Peacock",
+      "incorrectAnswers": [
+        "Mrs Plum, Miss Jade, Mrs Scarlett",
+        "Mrs White, Miss Gold, Mrs Green",
+        "Miss Silver, Mrs Pink, Mrs Indigo"
+      ],
+      "question": "Name The 3 Female Characters In The Game Cluedo",
+      "tags": [
+        "games",
+        "colours",
+        "sport"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Sport & Leisure",
+      "id": "62417ccd8c3137686862d73c",
+      "correctAnswer": "Boston Celtics",
+      "incorrectAnswers": [
+        "Boston Braves",
+        "Boston Capitals",
+        "Boston Browns"
+      ],
+      "question": "Which of these is a basketball team based in Boston?",
+      "tags": [
+        "basketball",
+        "nba",
+        "boston",
+        "usa",
+        "sport"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Sport & Leisure",
+      "id": "622a1c367cc59eab6f950088",
+      "correctAnswer": "The Jack",
+      "incorrectAnswers": [
+        "The Nightmare",
+        "The Flush",
+        "The Drone"
+      ],
+      "question": "What Is The Name Of The White Ball In A Game Of Bowls?",
+      "tags": [
+        "sport"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Sport & Leisure",
+      "id": "622a1c367cc59eab6f950047",
+      "correctAnswer": "Adolf Hitler",
+      "incorrectAnswers": [
+        "Josef Stalin",
+        "Joseph Goebbels",
+        "Hans von Tschammer und Osten"
+      ],
+      "question": "Who was supposed to present Jesse Owens his 100 metre Gold Medal at the Berlin Olympics?",
+      "tags": [
+        "olympics",
+        "people",
+        "general_knowledge",
+        "sport"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Sport & Leisure",
+      "id": "62417d8e0f96c4efe8d773d3",
+      "correctAnswer": "Pittsburgh Steelers",
+      "incorrectAnswers": [
+        "Pittsburgh Mariners",
+        "Pittsburgh Suns",
+        "Pittsburgh Eagles"
+      ],
+      "question": "Which of these is an American Football team based in Pittsburgh?",
+      "tags": [
+        "football",
+        "usa",
+        "american_football",
+        "sport"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Sport & Leisure",
+      "id": "622a1c3c7cc59eab6f9518e9",
+      "correctAnswer": "Trivial Pursuit",
+      "incorrectAnswers": [
+        "Kerplunk",
+        "Settlers of Catan",
+        "Yahtzee!"
+      ],
+      "question": "What board game, introduced in the eighties, features six categories of questions and little pie shaped pieces you have to collect?",
+      "tags": [
+        "games"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Sport & Leisure",
+      "id": "622a1c347cc59eab6f94f871",
+      "correctAnswer": "Cricket",
+      "incorrectAnswers": [
+        "Motor Racing",
+        "Snooker",
+        "Rowing"
+      ],
+      "question": "With which sport is Brian Lara associated?",
+      "tags": [
+        "people",
+        "sport"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Sport & Leisure",
+      "id": "6242e859a22452794eaef214",
+      "correctAnswer": "The Tigers",
+      "incorrectAnswers": [
+        "The Reds",
+        "The Potters",
+        "The Bees"
+      ],
+      "question": "What is the nickname of the English football team Hull City?",
+      "tags": [
+        "sport"
+      ],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    }
+  ]
